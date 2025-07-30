@@ -1,0 +1,62 @@
+.note-detail {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 30px 28px 24px 28px;
+  min-height: 220px;
+  box-shadow: 0 2px 10px rgb(30 30 70 / 5%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.note-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.note-detail-header h2 {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.note-detail-actions {
+  display: flex;
+  gap: 2px;
+}
+.note-detail-content {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-top: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 80px;
+}
+.empty {
+  color: #aaa;
+}
+.note-detail-empty {
+  box-shadow: none;
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  background: none;
+  font-style: italic;
+  font-size: 1.07rem;
+}
+
+/* Responsive detail */
+@media (max-width: 650px) {
+  .note-detail {
+    padding: 15px 7px 10px 7px;
+    max-width: 97vw;
+  }
+  .note-detail-header h2 {
+    font-size: 1.08rem;
+  }
+}

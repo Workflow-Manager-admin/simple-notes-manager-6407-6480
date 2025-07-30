@@ -21,12 +21,85 @@
   --button-text: #ffffff;
 }
 
-.App {
-  text-align: center;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+/* Notes App root layout overrides */
+.notes-app-root {
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100vw;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  transition: background 0.22s, color 0.15s;
+  display: flex;
+}
+/* main panel */
+.main-panel {
+  flex: 1;
+  margin-left: 220px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 38px 37px 24px 37px;
+  width: 100%;
+  min-height: 100vh;
+}
+.notes-list-section {
+  width: 340px;
+  min-width: 220px;
+  position: relative;
+}
+.note-detail-section {
+  flex: 1;
+  min-width: 0;
+  padding-left: 8px;
+}
+.floating-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  z-index: 20;
+  font-size: 1.9rem;
+  line-height: 1.15;
+  padding: 0 16px;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+}
+
+/* Responsive for small screens */
+@media (max-width: 1100px) {
+  .main-content {
+    flex-direction: column;
+    padding: 18px 2vw 18px 2vw;
+    gap: 16px;
+  }
+  .notes-list-section, .note-detail-section {
+    width: 100%;
+    min-width: 0;
+  }
+  .main-panel {
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .main-content {
+    flex-direction: column;
+    padding: 13px 1vw 10px 1vw;
+    gap: 10px;
+  }
+  .floating-btn {
+    font-size: 1.5rem;
+    width: 33px;
+    height: 33px;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 .App-logo {
